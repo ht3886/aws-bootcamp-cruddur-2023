@@ -22,9 +22,9 @@ View the [Alarm Config](https://github.com/ht3886/aws-bootcamp-cruddur-2023/blob
 View the [Budget](https://github.com/ht3886/aws-bootcamp-cruddur-2023/blob/main/aws/json/budget.json) and [Budget Notification - SNS](https://github.com/ht3886/aws-bootcamp-cruddur-2023/blob/main/aws/json/budget.json) files on main branch.
 
 ### Recreate Conceptual Diagram in LucidCharts (Napkin Design)
-![Conceptual Diagram](../../_docs/assets/week0/Napkin Diagram.png)
+![Conceptual Diagram](_docs/assets/week0/Napkin Diagram.png)
 
 ### Finished Architectural Diagram in LucidCharts
-![Architectural Diagram](../../_docs/assets/week0/Architectural Diagram.png)
+![Architectural Diagram](_docs/assets/week0/Architectural Diagram.png)
 
 ## Homework Challenges
