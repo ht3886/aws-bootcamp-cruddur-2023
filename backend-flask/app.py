@@ -90,7 +90,7 @@ def init_rollbar():
     """init rollbar module"""
     rollbar.init(
         # access token
-        rollbar_access_token,
+        'd17f44938aad4191a21175dd909ee648',
         # environment name
         'production',
         # server root directory, makes tracebacks prettier
@@ -104,7 +104,7 @@ def init_rollbar():
 # Endpoint to test Rollbar
 @app.route('/rollbar/test')
 def rollbar_test():
-    rollbar.report_message('Hello World!', 'warning')
+    rollbar.report_message('My data for Rollbar 4', 'warning')
     return "Hello World!, this is Rollbar Test"
 
 @app.route("/api/message_groups", methods=['GET'])
