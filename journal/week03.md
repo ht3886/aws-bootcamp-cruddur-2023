@@ -6,8 +6,10 @@
 * Customize HomeFeedPage, SignInPage, and ProfileInfo page based on authenticated user.
 * Registered and confirmed creating a new user from cli.
 
+#### Cognito User pool
 ![Cognito User Pool](../_docs/assets/week3/Cognito-user-pool-aws.png)
 
+#### Newly created user
 ![Logged-in user](../_docs/assets/week3/posts-visible-when-logged-in.png)
 
 
