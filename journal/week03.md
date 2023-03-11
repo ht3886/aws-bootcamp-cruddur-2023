@@ -22,7 +22,7 @@
 ![Sign Up](../_docs/assets/week3/user-verified-cognito.png)
 
 ### Signed-in user
-![Logged-in user](../_docs/assets/week3/logged-in-user.png.png)
+![Logged-in user](../_docs/assets/week3/logged-in-user.png)
 
 ### Name and preffered name - Cognito
 ![username - handle](../_docs/assets/week3/name-username-cruddur.png)
