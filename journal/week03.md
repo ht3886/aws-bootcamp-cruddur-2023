@@ -42,4 +42,6 @@
 #### Extra post not visible when user logged out
 ![Logged-out user](../_docs/assets/week3/post-not-showing-when-logged-out.png)
 
+## Refrences
 
+https://github.com/cgauge/Flask-AWSCognito/blob/master/flask_awscognito/plugin.py
