@@ -36,9 +36,10 @@
 
 ### Implement backend token check
 
+#### Extra post for logged-in user
 ![Logged-in user](../_docs/assets/week3/posts-visible-when-logged-in.png)
 
-
+#### Extra post not visible when user logged out
 ![Logged-out user](../_docs/assets/week3/post-not-showing-when-logged-out.png)
 
 
