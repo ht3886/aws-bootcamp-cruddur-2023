@@ -10,7 +10,7 @@
 ![Cognito User Pool](../_docs/assets/week3/Cognito-user-pool-aws.png)
 
 #### Newly created user
-![Logged-in user](../_docs/assets/week3/posts-visible-when-logged-in.png)
+![Logged-in user](../_docs/assets/week3/logged-in-user.png)
 
 
 ## Required Homework/Tasks
@@ -22,7 +22,7 @@
 ![Sign Up](../_docs/assets/week3/user-verified-cognito.png)
 
 ### Signed-in user
-![Logged-in user](../_docs/assets/week3/posts-visible-when-logged-in.png)
+![Logged-in user](../_docs/assets/week3/logged-in-user.png.png)
 
 ### Name and preffered name - Cognito
 ![username - handle](../_docs/assets/week3/name-username-cruddur.png)
@@ -35,3 +35,10 @@
 ![Reset Password #3](../_docs/assets/week3/recover-password-3.png)
 
 ### Implement backend token check
+
+![Logged-in user](../_docs/assets/week3/posts-visible-when-logged-in.png)
+
+
+![Logged-out user](../_docs/assets/week3/post-not-showing-when-logged-out.png)
+
+
