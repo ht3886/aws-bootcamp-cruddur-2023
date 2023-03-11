@@ -80,6 +80,7 @@ RequestsInstrumentor().instrument()
 frontend = os.getenv('FRONTEND_URL')
 backend = os.getenv('BACKEND_URL')
 origins = [frontend, backend]
+#--------Handle CORS---------
 cors = CORS(
   app, 
   resources={r"/api/*": {"origins": origins}},
