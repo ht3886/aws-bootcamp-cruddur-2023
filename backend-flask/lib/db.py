@@ -1,5 +1,5 @@
 from psycopg_pool import ConnectionPool
-import 
+import os
 import re
 import sys
 from flask import current_app as app
@@ -9,19 +9,19 @@ class Db:
     self.init_pool()
 
   def template(self,*args):
-  pathing = list((app.root_path,'db','sql',) + args)
-  pathing[-1] = pathing[-1] + ".sql"
+    pathing = list((app.root_path,'db','sql',) + args)
+    pathing[-1] = pathing[-1] + ".sql"
 
-  template_path = os.path.join(*pathing)
+    template_path = os.path.join(*pathing)
 
-  green = '\033[92m'
-  no_color = '\033[0m'
-  print("\n")
-  print(f'{green} Load SQL Template: {template_path} {no_color}')
+    green = '\033[92m'
+    no_color = '\033[0m'
+    print("\n")
+    print(f'{green} Load SQL Template: {template_path} {no_color}')
 
-  with open(template_path, 'r') as f:
-    template_content = f.read()
-  return template_content
+    with open(template_path, 'r') as f:
+      template_content = f.read()
+    return template_content
 
   def init_pool(self):
     connection_url = os.getenv("CONNECTION_URL")
