@@ -5,6 +5,7 @@ from lib.db import db
 
 class MessageGroups:
   def run(cognito_user_id):
+    print("#############:", cognito_user_id)
     model = {
       'errors': None,
       'data': None
@@ -15,7 +16,7 @@ class MessageGroups:
       'cognito_user_id': cognito_user_id
     })
 
-    print(f"UUID: {my_user_uuid}")
+    print("UUID:", my_user_uuid)
 
     ddb = Ddb.client()
     data = Ddb.list_message_groups(ddb, my_user_uuid)
