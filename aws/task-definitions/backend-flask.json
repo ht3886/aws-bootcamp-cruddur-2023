@@ -42,10 +42,10 @@
         "environment": [
           {"name": "OTEL_SERVICE_NAME", "value": "backend-flask"},
           {"name": "OTEL_EXPORTER_OTLP_ENDPOINT", "value": "https://api.honeycomb.io"},
-          {"name": "AWS_COGNITO_USER_POOL_ID", "value": "ca-central-1_CQ4wDfnwc"},
-          {"name": "AWS_COGNITO_USER_POOL_CLIENT_ID", "value": "5b6ro31g97urk767adrbrdj1g5"},
-          {"name": "FRONTEND_URL", "value": "*"},
-          {"name": "BACKEND_URL", "value": "*"},
+          {"name": "AWS_COGNITO_USER_POOL_ID", "value": "ca-central-1_dNzJSycqF"},
+          {"name": "AWS_COGNITO_USER_POOL_CLIENT_ID", "value": "6fp55f852pipbsk1uqvng2im75"},
+          {"name": "FRONTEND_URL", "value": "https://mr-trivedi.click"},
+          {"name": "BACKEND_URL", "value": "https://api.mr-trivedi.click"},
           {"name": "AWS_DEFAULT_REGION", "value": "ca-central-1"}
         ],
         "secrets": [
