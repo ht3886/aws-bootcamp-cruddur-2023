@@ -116,7 +116,6 @@ def init_rollbar():
 
 @app.route('/api/health-check')
 def health_check():
-  hello()
   return {'success': True}, 200
 
 # Endpoint to test Rollbar
