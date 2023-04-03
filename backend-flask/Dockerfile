@@ -18,11 +18,8 @@ RUN pip3 install -r requirements.txt
 # second period '.' refers to /backend-flask (inside container)
 COPY . .
 
-# Set Environment Variables(Env Vars)
-# Inside Container and will remain set while the container is running
-ENV FLASK_DEBUG=1
-
 EXPOSE ${PORT}
 
 # CMD(command)
-CMD [ "python3", "-m" , "flask", "run", "--host=0.0.0.0", "--port=4567"]
+# python3 -m flask run --host=0.0.0.0 --port=4567
+CMD [ "python3", "-m" , "flask", "run", "--host=0.0.0.0", "--port=4567", "--debug"]
