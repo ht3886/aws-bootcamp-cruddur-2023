@@ -81,7 +81,7 @@ class Db:
         json = cur.fetchone()
   
         if json == None:
-          "{}"
+          return "{}"
         else:
           return json[0]
           
