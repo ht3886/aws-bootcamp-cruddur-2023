@@ -47,25 +47,64 @@
 ![aws-task-running-health-check-passed](../_docs/assets/week6-and-week7/aws-task-running-health-check-passed.png)
 
 #### Bash into ECS container
-![connect-to-ecs-container-using-bash-script](../_docs/assets/week6-and-week7/connect-to-ecs-container-using-bash-script.png)
+![bash-into-ecs-container](../_docs/assets/week6-and-week7/connect-to-ecs-container-using-bash-script.png)
 
 #### HealthCheck working for cruddur service
-![health-check-api-working-for-cruddur-service](../_docs/assets/week6-and-week7/health-check-api-working-for-cruddur-service.png)
+![HC-api-working-for-cruddur-service](../_docs/assets/week6-and-week7/health-check-api-working-for-cruddur-service.png)
 
 #### Security Group modified - It now allows cruddur service to connect to RDS data
-![modified-rds-security-group-and-it-now-allows-cruddur-service-to-connect-to-rds-db-data](../_docs/assets/week6-and-week7/modified-rds-security-group-and-it-now-allows-cruddur-service-to-connect-to-rds-db-data.png)
+![modified-rds-sg-](../_docs/assets/week6-and-week7/modified-rds-security-group-and-it-now-allows-cruddur-service-to-connect-to-rds-db-data.png)
 
 #### Load Balancer to container service
-![aws-load-balancer-associated-to-container-service](../_docs/assets/week6-and-week7/aws-load-balancer-associated-to-container-service.png)
+![ALB-associated-to-container-service](../_docs/assets/week6-and-week7/aws-load-balancer-associated-to-container-service.png)
 
 #### ALB running healthy
 ![alb-running-healthy](../_docs/assets/week6-and-week7/alb-running-healthy.png)
 
 #### Create frontend repo and set env vars
-![](../_docs/assets/week6-and-week7/create-front-end-repo-and-set-env-var-uri.png)
+![FrontEnd Repo](../_docs/assets/week6-and-week7/create-front-end-repo-and-set-env-var-uri.png)
 
-#### Docker image is pushed and frontend is not
-![](../_docs/assets/week6-and-week7/docker-image-pushed-and -frontend-is-loading.png)
+#### Shell into FrontEnd Container
+![shell-into-frontend-react-js-container](../_docs/assets/week6-and-week7/shell-into-frontend-react-js-container)
 
-#### 
-![](../_docs/assets/week6-and-week7/.png)
+#### Cruddur FrontEnd Target Group registered and is Healthy
+![cruddur-frontend-tg-healthy](../_docs/assets/week6-and-week7/cruddur-frontend-target-group-healthy.png)
+
+#### Cruddur (FrontEnd) website now running and loading data on HomeFeed
+![Cruddur-website-running](../_docs/assets/week6-and-week7/frontend-website-running-on-ALB-and-loading-data.png)
+
+#### Purchase a new domain "mr-trivedi.click" from Route53
+![purchase-new-domain](../_docs/assets/week6-and-week7/aws-purchased-a-new-domain.png)
+
+#### Request Public certificate from ACM
+![request-cert-ACM](../_docs/assets/week6-and-week7/aws-request-public-cert-certificate-manager.png)
+
+#### Update rules on ALB-listener on port-443
+![update-ALB-rules](../_docs/assets/week6-and-week7/update-rules-on-alb-listener-on-port-443.png)
+
+#### Create A type record in route53 for frontend - https://mr-trivedi.click 
+![A-type-record-root](../_docs/assets/week6-and-week7/aws-create-root53-record-for-frontend.png)
+
+#### Create another A type record in route53 for backend - https://api.mr-trivedi.click 
+![A-type-record-api.root](../_docs/assets/week6-and-week7/aws-create-another-route53-record-for-backend.png)
+
+#### FrontEnd successfully deployed on my domain
+![frontend-on-my-domain](../_docs/assets/week6-and-week7/frontend-now-working-on-my-domain.png)
+
+#### BackEnd successfully deployed on my domain
+![backend-now-on-my-domain](../_docs/assets/week6-and-week7/backend-now-working-on-my-domain.png)
+
+#### Post messages to another user - Bayko
+![post-messages-to-another-user](../_docs/assets/week6-and-week7/post-messages-in-prod-to-another-user.png)
+
+#### Create my own network - 'cruddur-net'
+![](../_docs/assets/week6-and-week7/my-own-network-created-cruddur-net.png)
+
+#### Implement Busybox
+![Busybox](../_docs/assets/week6-and-week7/busybox-implemented.png)
+
+#### Timezone fix implemented in HomeFeedPage
+![timezone-fix-homefeed](../_docs/assets/week6-and-week7/timezone-fix-1-HomeFeedPage.png)
+
+#### Timezone fix implemented in Messages
+![timezone-fix-messages](../_docs/assets/week6-and-week7/timezone-fix-2-messages.png)
