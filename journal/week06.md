@@ -65,7 +65,7 @@
 ![FrontEnd Repo](../_docs/assets/week6-and-week7/create-front-end-repo-and-set-env-var-uri.png)
 
 #### Shell into FrontEnd Container
-![shell-into-frontend-react-js-container](../_docs/assets/week6-and-week7/shell-into-frontend-react-js-container)
+![shell-into-frontend-react-js-container](../_docs/assets/week6-and-week7/shell-into-frontend-react-js-container.png)
 
 #### Cruddur FrontEnd Target Group registered and is Healthy
 ![cruddur-frontend-tg-healthy](../_docs/assets/week6-and-week7/cruddur-frontend-target-group-healthy.png)
