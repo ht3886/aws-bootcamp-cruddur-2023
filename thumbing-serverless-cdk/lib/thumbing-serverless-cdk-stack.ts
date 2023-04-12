@@ -29,26 +29,26 @@ export class ThumbingServerlessCdkStack extends cdk.Stack {
     console.log('functionPath',functionPath)
 
     const bucket = this.createBucket(bucketName);
-    //const bucket = this.importBucket(bucketName);
+    // const bucket = this.importBucket(bucketName);
 
     // create a lambda
     const lambda = this.createLambda(functionPath, bucketName, folderInput, folderOutput);
 
     // create topic and subscription
-    //const snsTopic = this.createSnsTopic(topicName)
-    //this.createSnsSubscription(snsTopic,webhookUrl)
+    const snsTopic = this.createSnsTopic(topicName)
+    this.createSnsSubscription(snsTopic,webhookUrl)
 
     // add our s3 event notifications
     this.createS3NotifyToLambda(folderInput,lambda,bucket)
-    //this.createS3NotifyToSns(folderOutput,snsTopic,bucket)
+    this.createS3NotifyToSns(folderOutput,snsTopic,bucket)
 
     // create policies
-    //const s3ReadWritePolicy = this.createPolicyBucketAccess(bucket.bucketArn)
-    //const snsPublishPolicy = this.createPolicySnSPublish(snsTopic.topicArn)
+    const s3ReadWritePolicy = this.createPolicyBucketAccess(bucket.bucketArn)
+    // const snsPublishPolicy = this.createPolicySnSPublish(snsTopic.topicArn)
 
     // attach policies for permissions
-    //lambda.addToRolePolicy(s3ReadWritePolicy);
-    //lambda.addToRolePolicy(snsPublishPolicy);
+    lambda.addToRolePolicy(s3ReadWritePolicy);
+    // lambda.addToRolePolicy(snsPublishPolicy);
 
   }
 
@@ -90,55 +90,54 @@ export class ThumbingServerlessCdkStack extends cdk.Stack {
     )
   }
 
-  // createPolicyBucketAccess(bucketArn: string){
-  //   const s3ReadWritePolicy = new iam.PolicyStatement({
-  //     actions: [
-  //       's3:GetObject',
-  //       's3:PutObject',
-  //     ],
-  //     resources: [
-  //       `${bucketArn}/*`,
-  //     ]
-  //   });
-  //   return s3ReadWritePolicy;
-  // }
+  createPolicyBucketAccess(bucketArn: string){
+    const s3ReadWritePolicy = new iam.PolicyStatement({
+      actions: [
+        's3:GetObject',
+        's3:PutObject',
+      ],
+      resources: [
+        `${bucketArn}/*`,
+      ]
+    });
+    return s3ReadWritePolicy;
+  }
 
-  // createSnsTopic(topicName: string): sns.ITopic{
-  //   const logicalName = "ThumbingTopic";
-  //   const snsTopic = new sns.Topic(this, logicalName, {
-  //     topicName: topicName
-  //   });
-  //   return snsTopic;
-  // }
+  createSnsTopic(topicName: string): sns.ITopic{
+    const logicalName = "ThumbingTopic";
+    const snsTopic = new sns.Topic(this, logicalName, {
+      topicName: topicName
+    });
+    return snsTopic;
+  }
 
-  // createSnsSubscription(snsTopic: sns.ITopic, webhookUrl: string): sns.Subscription {
-  //   const snsSubscription = snsTopic.addSubscription(
-  //     new subscriptions.UrlSubscription(webhookUrl)
-  //   )
-  //   return snsSubscription;
-  // }
+  createSnsSubscription(snsTopic: sns.ITopic, webhookUrl: string): sns.Subscription {
+    const snsSubscription = snsTopic.addSubscription(
+      new subscriptions.UrlSubscription(webhookUrl)
+    )
+    return snsSubscription;
+  }
 
-  // createS3NotifyToSns(prefix: string, snsTopic: sns.ITopic, bucket: s3.IBucket): void {
-  //   const destination = new s3n.SnsDestination(snsTopic)
-  //   bucket.addEventNotification(
-  //     s3.EventType.OBJECT_CREATED_PUT, 
-  //     destination,
-  //     {prefix: prefix}
-  //   );
-  // }
+  createS3NotifyToSns(prefix: string, snsTopic: sns.ITopic, bucket: s3.IBucket): void {
+    const destination = new s3n.SnsDestination(snsTopic)
+    bucket.addEventNotification(
+      s3.EventType.OBJECT_CREATED_PUT, 
+      destination,
+      {prefix: prefix}
+    );
+  }
 
-  // /*
-  // createPolicySnSPublish(topicArn: string){
-  //   const snsPublishPolicy = new iam.PolicyStatement({
-  //     actions: [
-  //       'sns:Publish',
-  //     ],
-  //     resources: [
-  //       topicArn
-  //     ]
-  //   });
-  //   return snsPublishPolicy;
-  // }
-  // */
-
+  /*
+  createPolicySnSPublish(topicArn: string){
+    const snsPublishPolicy = new iam.PolicyStatement({
+      actions: [
+        'sns:Publish',
+      ],
+      resources: [
+        topicArn
+      ]
+    });
+    return snsPublishPolicy;
+  }
+  */
 }
