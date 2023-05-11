@@ -22,7 +22,7 @@ export default function ProfileForm(props) {
       const res = await fetch(backend_url, {
         method: "POST",
         headers: {
-          'Origin': "https://3000-ht3886-awsbootcampcrudd-3ej4n5vyge3.ws-us96b.gitpod.io",
+          'Origin': "https://3000-ht3886-awsbootcampcrudd-aij03e2zzk1.ws-us97.gitpod.io/",
           'Authorization': `${access_token}`,
           'Accept': 'application/json',
           'Content-Type': 'application/json'
